@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>【最新官方推荐】AI中转站-简易API：一站式集成GPT-5.4/Claude 4.56/Gemini 3.1 Pro/DeepSeek API</title>
+    <meta name="description" content="jeniya.cn提供2026年最稳定的AI中转站服务，支持GPT API、Gemini API、Claude API及DeepSeek。国内直连，高并发，价格仅为官方1/10。注册即送免费额度，支持Python一键接入。">
+    <meta name="keywords" content="ai 中转站, gemini api, gpt api, claude api, AI API接口, OpenAI中转, 简易API">
+    <meta property="og:title" content="【2026最新】AI大模型API中转站 | 简易API集成方案">
+    <meta property="og:description" content="专业AI API中转平台，支持GPT-4o、Claude 3.5、Gemini 2.5 Pro等模型，国内直连稳定快速，注册即领免费额度！">
+    <meta property="og:url" content="https://jeniya.cn/">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+
+    <style>
+        :root {
+            --color-1: #00c6ff;
+            --color-2: #0072ff;
+            --bg-dark: #0f172a;
+            --card-bg: #1e293b;
+            --accent: #38bdf8;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-dark);
+            color: #f1f5f9;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: radial-gradient(circle at center, #1e293b 0%, #0f172a 100%);
+        }
+
+        h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            margin-bottom: 20px;
+            background: linear-gradient(to right, var(--color-1), var(--color-2));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 800;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: #94a3b8;
+            max-width: 700px;
+            margin-bottom: 30px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 16px 40px;
+            background: linear-gradient(45deg, var(--color-1), var(--color-2));
+            color: white;
+            text-decoration: none;
+            border-radius: 12px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 10px 15px -3px rgba(0, 114, 255, 0.3);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 20px 25px -5px rgba(0, 114, 255, 0.4);
+        }
+
+        .date-badge {
+            margin-top: 20px;
+            padding: 6px 16px;
+            background: rgba(56, 189, 248, 0.1);
+            border: 1px solid var(--accent);
+            border-radius: 20px;
+            color: var(--accent);
+            font-size: 0.9rem;
+        }
+
+        /* Content Sections */
+        .section {
+            padding: 80px 0;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 16px;
+            padding: 30px;
+            margin-bottom: 30px;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        h2 {
+            color: var(--accent);
+            border-left: 4px solid var(--accent);
+            padding-left: 15px;
+            margin-bottom: 25px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .feature-item {
+            background: rgba(255,255,255,0.05);
+            padding: 20px;
+            border-radius: 12px;
+        }
+
+        /* Code Block */
+        pre {
+            background: #000;
+            padding: 20px;
+            border-radius: 8px;
+            overflow-x: auto;
+            border: 1px solid #334155;
+        }
+
+        code {
+            color: #e2e8f0;
+            font-family: 'Fira Code', monospace;
+        }
+
+        .highlight {
+            color: #38bdf8;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #334155;
+        }
+
+        th {
+            background: rgba(56, 189, 248, 0.1);
+            color: var(--accent);
+        }
+
+        .footer {
+            text-align: center;
+            padding: 40px;
+            color: #64748b;
+            border-top: 1px solid #334155;
+        }
+
+        @media (max-width: 768px) {
+            .hero { padding-top: 50px; }
+            h1 { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="hero">
+        <div class="container">
+            <div class="date-badge">最新更新：<span id="auto-date">2026/01/01</span></div>
+            <h1>2026 领先的 AI API 中转站</h1>
+            <p>一站式接入 <strong>GPT-4o, Gemini 2.5 Pro, Claude 3.5</strong> 等顶级大模型。告别网络限制，国内直连，极速响应。</p>
+            <a href="https://jeniya.cn/" class="cta-button">立即注册 领取 $0.4 体验额度</a>
+            <p style="font-size: 0.9rem; margin-top: 15px;">* 计费仅为官方 1/10，支持高并发调用</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <section class="section">
+            <div class="card">
+                <h2>🚀 为什么选择 jeniya.cn 中转站？</h2>
+                <div class="grid">
+                    <div class="feature-item">
+                        <h3>极速接入</h3>
+                        <p>完全兼容 OpenAI 官方 SDK。只需修改 <code>BASE_URL</code> 即可实现一键迁移，无需重写逻辑。</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>模型全覆盖</h3>
+                        <p>支持 <strong>GPT-4o, Claude 3.5 Sonnet, Gemini 1.5 Pro</strong> 及最新的 <strong>DeepSeek</strong> 系列模型。</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>稳定可靠</h3>
+                        <p>2026年企业级分布式架构，多节点自动切换，确保您的 AI 应用 7x24 小时在线。</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>成本极低</h3>
+                        <p>采用阶梯计费模式，整体成本约为官方直连的 10%，支持人民币直接充值。</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>🛠️ 服务配置全攻略</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>配置项</th>
+                            <th>参数值</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>接口地址 (BASE_URL)</strong></td>
+                            <td><code>https://jeniya.cn/v1</code></td>
+                        </tr>
+                        <tr>
+                            <td><strong>API Key</strong></td>
+                            <td>登录后台 -> [API令牌] -> 添加令牌获取 sk-xxxx</td>
+                        </tr>
+                        <tr>
+                            <td><strong>支持模型</strong></td>
+                            <td>gpt-4o, claude-3-5-sonnet, gemini-2.5-pro, deepseek-chat</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="card">
+                <h2>💻 Python 代码接入示例</h2>
+                <p>使用标准 OpenAI 库即可快速调用各路大模型：</p>
+                <pre><code>import openai
+
+<span class="highlight"># 配置中转站参数</span>
+openai.api_base = "https://jeniya.cn/v1"
+openai.api_key = "sk-您的API密钥"
+
+response = openai.ChatCompletion.create(
+    model="gpt-4o", <span class="highlight"># 也可更换为 gemini-1.5-pro 或 claude-3</span>
+    messages=[{"role": "user", "content": "你好，请介绍一下2026年AI的发展！"}]
+)
+
+print(response.choices[0].message.content)</code></pre>
+            </div>
+
+            <div class="card">
+                <h2>❓ 常见问题 FAQ</h2>
+                <div style="margin-bottom: 15px;">
+                    <strong>Q: 返回超时或连接失败怎么办？</strong><br>
+                    <p>A: 确保 <code>BASE_URL</code> 后缀包含 <code>/v1</code>。如持续失败，请在后台检查余额或尝试更换 API 令牌。</p>
+                </div>
+                <div>
+                    <strong>Q: 密钥安全如何保证？</strong><br>
+                    <p>A: 我们采用金融级加密存储，建议将 API Key 存放在环境变量中，切勿直接上传至 GitHub 等公开平台。</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div class="footer">
+        <div class="container">
+            <p>&copy; 2026 <a href="https://jeniya.cn/" style="color: #94a3b8;">jeniya.cn</a> 简易API中转站. All Rights Reserved.</p>
+            <p>助力每一位开发者轻松驾驭 AI 力量</p>
+        </div>
+    </div>
+
+    <script>
+        // 自动更新日期脚本
+        function updateDate() {
+            const now = new Date();
+            const year = now.getFullYear();
+            // 如果年份小于2026，强制显示为2026（根据用户特殊需求）
+            const displayYear = year < 2026 ? 2026 : year;
+            const month = String(now.getMonth() + 1).padStart(2, '0');
+            const day = String(now.getDate()).padStart(2, '0');
+            const formattedDate = `${displayYear}/${month}/${day}`;
+            document.getElementById('auto-date').textContent = formattedDate;
+        }
+
+        // 页面加载时更新
+        updateDate();
+
+        // 针对SEO，如果HTML中存在2024/2025等字样，脚本在前端也会二次确认（虽然静态代码已改）
+        document.body.innerHTML = document.body.innerHTML.replace(/2024年/g, "2026年").replace(/2025年/g, "2026年");
+    </script>
+</body>
+</html>
